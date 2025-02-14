@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        html, body { margin: 0; height: 100%; }
+        .swiper { height: 100vh; }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            padding: 20px;
+        }
+        /* 响应式图片 */
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- 每页内容 -->
+            <div class="swiper-slide">
+                <h1>作品1</h1>
+                <img src="work1.jpg" alt="作品1">
+            </div>
+            <div class="swiper-slide">
+                <h1>作品2</h1>
+                <video controls><source src="work2.mp4"></video>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            direction: 'vertical', // 垂直滑动
+            mousewheel: true,      // PC端鼠标滚轮
+            keyboard: true,       // 键盘控制
+            slidesPerView: 1,     // 单页显示
+        });
+    </script>
+</body>
+</html>
